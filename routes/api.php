@@ -18,3 +18,12 @@ Route::group(['namespace' => 'App\Api\v1\Controllers'], function () {
         Route::get('users', ['uses' => 'UserController@index']);
     });
 });
+
+Route::get('v1/dashboard-data','App\Api\v1\Controllers\DashboardController@getData');
+
+Route::get('test-json',function () {
+    return response()->json([
+        'message' => 'Hello World!',
+        'status' =>'success'
+    ]);
+});
