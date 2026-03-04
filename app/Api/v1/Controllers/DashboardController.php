@@ -15,7 +15,7 @@ class DashboardController extends ApiController{
             'offers'   => Offer::count(),
             'invoices' => Invoice::count(),
             'payments' => Payment::count(),
-            'total_revenue' => Payment::sum('amount') / 100 // Conversion en devise réelle
+            'total_revenue' => Payment::sum('amount') / 100 
         ];
 
         return response()->json([

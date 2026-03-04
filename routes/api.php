@@ -19,7 +19,9 @@ Route::group(['namespace' => 'App\Api\v1\Controllers'], function () {
     });
 });
 
-Route::get('v1/dashboard-data','App\Api\v1\Controllers\DashboardController@getData');
+// Route directe pour votre app Java
+Route::get('dashboard-data', 'App\Api\v1\Controllers\DashboardController@getData');
+
 
 Route::get('test-json',function () {
     return response()->json([
